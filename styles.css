@@ -7,7 +7,7 @@
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:72px}
 body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--txt);line-height:1.6;overflow-x:hidden}
-h1,h2,h3,.stat-num,.hl-big,.brand-text{font-family:'Oswald',sans-serif;letter-spacing:.5px}
+h1,h2,h3,.stat-num,.hl-big,.brand-text,.ad-d,.medal{font-family:'Archivo',sans-serif;letter-spacing:-.5px}
 a{color:inherit;text-decoration:none}
 .accent{color:var(--red)}
 img{max-width:100%;display:block}
@@ -28,11 +28,11 @@ img{max-width:100%;display:block}
 
 /* HERO */
 .hero{position:relative;height:100vh;min-height:600px;display:flex;align-items:flex-end;justify-content:center;text-align:center;overflow:hidden;padding-bottom:110px}
-.hero-media{position:absolute;inset:0;background:url('assets/gallery/hero.jpg') center top/cover no-repeat;transform:scale(1.05)}
+.hero-media{position:absolute;inset:0;background:url('assets/gallery/hero2.jpg') center 20%/cover no-repeat;transform:scale(1.05)}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,12,.25) 0%,rgba(10,10,12,.2) 35%,rgba(10,10,12,.75) 75%,rgba(10,10,12,.97) 100%)}
 .hero-content{position:relative;z-index:2;padding:0 24px}
 .hero-kicker{color:var(--red);font-weight:600;letter-spacing:3px;font-size:14px;margin-bottom:16px}
-.hero h1{font-size:clamp(48px,9vw,110px);font-weight:700;line-height:.95;text-transform:uppercase}
+.hero h1{font-size:clamp(52px,10vw,124px);font-weight:900;line-height:.9;text-transform:uppercase;letter-spacing:-2px}
 .hero-tagline{font-family:'Oswald';font-size:clamp(20px,3vw,32px);color:var(--txt-dim);margin-top:8px;font-style:italic}
 .hero-cta{display:flex;gap:16px;justify-content:center;margin-top:36px;flex-wrap:wrap}
 .btn-primary{background:var(--red);color:#fff;padding:14px 32px;border-radius:4px;font-weight:600;text-transform:uppercase;letter-spacing:1px;font-size:14px;transition:transform .15s,background .2s}
@@ -55,7 +55,7 @@ img{max-width:100%;display:block}
 .section-alt>*{max-width:var(--maxw);margin-left:auto;margin-right:auto}
 .section-head{margin-bottom:48px}
 .eyebrow{color:var(--red);font-weight:600;text-transform:uppercase;letter-spacing:3px;font-size:13px}
-.section-head h2{font-size:clamp(32px,5vw,52px);font-weight:700;text-transform:uppercase;margin-top:8px}
+.section-head h2{font-size:clamp(34px,5.5vw,58px);font-weight:800;text-transform:uppercase;margin-top:10px;line-height:1}
 .subhead{font-size:26px;font-weight:600;text-transform:uppercase;margin:56px 0 24px}
 
 /* PILOTE */
@@ -107,13 +107,28 @@ img{max-width:100%;display:block}
 .agenda-info span{display:block;color:var(--txt-dim);font-size:13px}
 .agenda-tag{background:rgba(228,0,43,.15);color:var(--red);padding:5px 14px;border-radius:20px;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.5px}
 
-/* GALLERY */
-.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:12px}
-.g-item{overflow:hidden;border-radius:8px;cursor:pointer}
-.g-item img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
-.g-item:hover img{transform:scale(1.08)}
-.g-tall{grid-row:span 2}
-.g-wide{grid-column:span 2}
+/* GALLERY — mosaïque */
+.gallery-grid{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:170px;gap:14px}
+.g-item{overflow:hidden;border-radius:12px;cursor:pointer;position:relative;grid-column:span 2;grid-row:span 1}
+.g-item::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(10,10,12,.35));opacity:0;transition:opacity .3s}
+.g-item:hover::after{opacity:1}
+.g-item img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.g-item:hover img{transform:scale(1.06)}
+/* Rythme de la mosaïque : certaines plus grandes */
+.g-item:nth-child(1){grid-column:span 3;grid-row:span 2}
+.g-item:nth-child(4){grid-column:span 3;grid-row:span 2}
+.g-item:nth-child(6){grid-row:span 2}
+.g-item:nth-child(9){grid-column:span 4}
+.g-item:nth-child(11){grid-column:span 4;grid-row:span 2}
+
+/* TEAM */
+.team-card{display:grid;grid-template-columns:280px 1fr;gap:48px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:48px}
+.team-logo{display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at center,rgba(228,0,43,.08),transparent 70%);border-radius:12px;padding:24px}
+.team-logo img{max-width:220px;filter:drop-shadow(0 8px 24px rgba(228,0,43,.25))}
+.team-info strong{font-family:'Archivo';font-size:28px;font-weight:800;display:block;margin-bottom:16px}
+.team-info p{color:var(--txt-dim);margin-bottom:14px}
+.team-motto{font-style:italic;color:var(--txt)!important;border-left:3px solid var(--red);padding-left:16px}
+.team-link{color:var(--red);font-weight:600;text-transform:uppercase;letter-spacing:1px;font-size:14px}
 
 /* PARTNERS */
 .partners-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
@@ -161,8 +176,11 @@ footer{background:var(--bg-alt);border-top:1px solid var(--line);padding:56px 24
   .stat:nth-child(1),.stat:nth-child(2){border-bottom:1px solid var(--line)}
   .pilote-grid{grid-template-columns:1fr}
   .highlight-cards,.other-races,.partners-grid{grid-template-columns:1fr}
-  .gallery-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px}
-  .g-wide{grid-column:span 2}.g-tall{grid-row:span 1}
+  .team-card{grid-template-columns:1fr;gap:28px;padding:32px;text-align:center}
+  .team-motto{text-align:left}
+  .gallery-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px}
+  .g-item,.g-item:nth-child(n){grid-column:span 1;grid-row:span 1}
+  .g-item:nth-child(1),.g-item:nth-child(4),.g-item:nth-child(11){grid-column:span 2}
   .section{padding:64px 20px}
 }
 @media(max-width:480px){
