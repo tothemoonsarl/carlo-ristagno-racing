@@ -28,11 +28,12 @@ const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 if (!reduce && 'IntersectionObserver' in window) {
   // Cibles à animer : cartes, panneaux, items
   const targets = document.querySelectorAll(
-    '.hl-card, .round, .other-card, .agenda-item, .pd-item, .split-content, .bigstat-inner'
+    '.hl-card, .round, .ocard, .agenda-item, .pd-item, .split-content, .bigstat-inner, ' +
+    '.section-head, .pilote-photo, .pilote-bio, .footer-brand, .footer-col, .closer-content, .contact-box'
   );
   targets.forEach(el => el.classList.add('reveal'));
   // Décalage en cascade par groupe de voisins
-  document.querySelectorAll('.highlight-cards, .rounds, .other-races, .agenda-list, .partners-detail').forEach(group => {
+  document.querySelectorAll('.highlight-cards, .rounds, .other-races, .agenda-list, .partners-detail, .footer-top').forEach(group => {
     [...group.children].forEach((child, i) => child.setAttribute('data-d', (i % 3) + 1));
   });
   const io = new IntersectionObserver((entries) => {

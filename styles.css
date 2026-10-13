@@ -15,10 +15,10 @@ sup{font-size:.5em;vertical-align:super}
 
 /* HEADER */
 #site-header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,12,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);transition:box-shadow .3s}
-.header-inner{max-width:var(--maxw);margin:0 auto;padding:0 24px;height:68px;display:flex;align-items:center;gap:24px}
-.brand{display:flex;align-items:center;gap:12px;margin-right:auto}
-.brand-logo{height:38px;width:auto}
-.brand-text{font-size:19px;font-weight:700;letter-spacing:0}
+.header-inner{max-width:var(--maxw);margin:0 auto;padding:0 24px;height:76px;display:flex;align-items:center;gap:14px}
+.brand{display:flex;align-items:center;gap:10px;margin-right:auto}
+.brand-logo{height:64px;width:auto}
+.brand-text{font-size:22px;font-weight:700;letter-spacing:0}
 .brand-text strong{color:var(--red)}
 #nav{display:flex;gap:28px}
 #nav a{font-size:13px;font-weight:600;color:var(--txt-dim);transition:color .2s;text-transform:uppercase;letter-spacing:.5px}
@@ -118,13 +118,21 @@ sup{font-size:.5em;vertical-align:super}
 .table-note{color:var(--txt-dim);font-size:13px;margin-top:20px;font-style:italic}
 
 /* OTHER RACES */
-.other-races{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.other-card{background:var(--card);border-radius:12px;padding:24px;display:flex;gap:20px;align-items:center;border:1px solid var(--line)}
-.other-card .medal{font-size:28px;font-weight:700;white-space:nowrap}
-.other-card strong{display:block;font-size:17px}
-.other-card span{display:block;color:var(--txt-dim);font-size:13px;margin:4px 0}
-.other-card em{color:var(--red);font-size:13px;font-style:normal;font-weight:600}
-.win-card{border-color:var(--red)}
+.other-races{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.ocard{position:relative;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;display:flex;gap:24px;align-items:center;overflow:hidden;transition:border-color .2s,transform .2s}
+.ocard:hover{transform:translateY(-3px)}
+.ocard-pos{display:flex;flex-direction:column;align-items:center;gap:8px;flex-shrink:0}
+.ocard-rank{font-family:'Archivo';font-size:44px;font-weight:900;line-height:1;letter-spacing:-2px}
+.ocard-medal{width:28px;height:28px;border-radius:50%;position:relative}
+.ocard-medal.gold{background:radial-gradient(circle at 35% 30%,#ffe08a,#e4a400)}
+.ocard-medal.silver{background:radial-gradient(circle at 35% 30%,#eaeaea,#9aa0a6)}
+.ocard-medal::after{content:"";position:absolute;inset:6px;border-radius:50%;border:1.5px solid rgba(0,0,0,.2)}
+.ocard-body strong{display:block;font-family:'Archivo';font-size:19px;font-weight:800;letter-spacing:-.5px}
+.ocard-body span{display:block;color:var(--txt-dim);font-size:13px;margin:6px 0}
+.ocard-body em{color:var(--red);font-size:13px;font-style:normal;font-weight:700;text-transform:uppercase;letter-spacing:.5px}
+.ocard-win{border-color:rgba(228,0,43,.45)}
+.ocard-win .ocard-rank{color:var(--red)}
+.ocard-flag{position:absolute;top:0;right:0;background:var(--red);color:#fff;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:5px 14px;border-radius:0 14px 0 12px}
 
 /* AGENDA */
 .agenda-list{display:flex;flex-direction:column;gap:12px}
@@ -187,16 +195,23 @@ sup{font-size:.5em;vertical-align:super}
 .socials a{color:var(--red);font-weight:700;text-transform:uppercase;letter-spacing:1px;font-size:14px}
 
 /* FOOTER */
-footer{background:var(--bg-alt);border-top:1px solid var(--line);padding:56px 24px 24px}
-.footer-inner{max-width:var(--maxw);margin:0 auto;display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;padding-bottom:32px;border-bottom:1px solid var(--line)}
-.footer-brand{display:flex;gap:16px;align-items:flex-start;max-width:380px}
-.footer-brand img{height:48px}
-.footer-brand strong{color:var(--red)}
-.footer-brand p{font-size:14px;color:var(--txt-dim)}
-.footer-nav{display:flex;flex-direction:column;gap:10px}
-.footer-nav a{color:var(--txt-dim);font-size:14px;transition:color .2s}
-.footer-nav a:hover{color:var(--txt)}
-.copyright{text-align:center;color:var(--txt-dim);font-size:13px;margin-top:24px}
+footer{background:var(--bg-alt);border-top:1px solid var(--line);position:relative;overflow:hidden}
+.footer-top{max-width:var(--maxw);margin:0 auto;padding:64px 24px 48px;display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px}
+.footer-brand{max-width:320px}
+.footer-logo{height:72px;margin-bottom:18px}
+.footer-tag{font-size:14px;color:var(--txt-dim);line-height:1.6}
+.footer-num{display:flex;gap:10px;margin-top:22px}
+.footer-num span{font-family:'Archivo';font-weight:900;font-size:16px;color:var(--red);border:1px solid rgba(228,0,43,.4);border-radius:6px;padding:4px 12px;letter-spacing:1px}
+.footer-col h4{font-size:12px;text-transform:uppercase;letter-spacing:2px;color:var(--txt);font-weight:700;margin-bottom:18px}
+.footer-col a{display:block;color:var(--txt-dim);font-size:14px;margin-bottom:12px;transition:color .2s,padding-left .2s}
+.footer-col a:hover{color:var(--red);padding-left:4px}
+.footer-team-link{display:flex!important;align-items:center;gap:10px}
+.footer-team-link img{height:32px;width:auto}
+.footer-team-link span{font-weight:600;color:var(--txt)}
+.footer-bottom{border-top:1px solid var(--line);max-width:var(--maxw);margin:0 auto;padding:22px 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-name{font-family:'Archivo';font-weight:900;font-size:20px;letter-spacing:-.5px;color:var(--txt)}
+.footer-name strong{color:var(--red)}
+.copyright{color:var(--txt-dim);font-size:13px}
 
 /* LIGHTBOX */
 .lightbox{display:none;position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,.93);align-items:center;justify-content:center;padding:40px}
@@ -228,6 +243,8 @@ footer{background:var(--bg-alt);border-top:1px solid var(--line);padding:56px 24
   .shot{height:220px}
   .bigstat-inner{gap:28px}
   .section{padding:64px 20px}
+  .footer-top{grid-template-columns:1fr 1fr;gap:32px}
+  .footer-brand{grid-column:1 / -1;max-width:none}
 }
 @media(max-width:480px){
   .partners-detail{grid-template-columns:1fr}
