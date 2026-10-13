@@ -7,7 +7,7 @@
 <meta name="description" content="Carlo Ristagno, pilote de karting de compétition. Saison 2026 en S125 Junior — Championnat IAME Series Switzerland (Vega Trofeo).">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Archivo+Narrow:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Archivo+Narrow:wght@600;700&family=Inter:wght@400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -72,7 +72,7 @@
 
 <!-- ===== PANNEAUX ON / OFF TRACK ===== -->
 <section class="split">
-  <div class="split-panel" style="background-image:url('assets/gallery/02.jpg')">
+  <div class="split-panel" style="background-image:url('assets/gallery/02.jpg');background-position:center 20%">
     <div class="split-overlay"></div>
     <div class="split-content">
       <span class="split-eyebrow">01</span>
@@ -81,7 +81,7 @@
       <a href="#resultats" class="split-link">Les résultats →</a>
     </div>
   </div>
-  <div class="split-panel" style="background-image:url('assets/gallery/04.jpg')">
+  <div class="split-panel" style="background-image:url('assets/gallery/07.jpg');background-position:center top">
     <div class="split-overlay"></div>
     <div class="split-content">
       <span class="split-eyebrow">02</span>
@@ -112,11 +112,8 @@
         <li><span>Karting depuis</span> 2025</li>
         <li><span>Numéro</span> 115 / 477</li>
         <li><span>Catégorie</span> S125 Junior</li>
+        <li class="fact-team"><span>Écurie</span> <a href="https://www.cavallinorampante.ch/" target="_blank" rel="noopener"><img src="assets/logo-cr.png" alt="Cavallino Rampante">Cavallino Rampante</a></li>
       </ul>
-      <a href="https://www.cavallinorampante.ch/" target="_blank" rel="noopener" class="pilote-team">
-        <img src="assets/logo-cr.png" alt="Cavallino Rampante">
-        <span><strong>Team Cavallino Rampante</strong>L'écurie qui accompagne Carlo sur chaque manche →</span>
-      </a>
     </div>
   </div>
 </section>
@@ -143,22 +140,65 @@
     </div>
   </div>
 
-  <div class="table-wrap">
-    <table class="results-table">
-      <thead>
-        <tr><th>Course</th><th>Qualif</th><th>Finale</th></tr>
-      </thead>
-      <tbody>
-        <tr><td><strong>R1</strong> Suisse · Levier <span class="td-date">03.05</span></td><td>P6</td><td>P7</td></tr>
-        <tr><td><strong>R2</strong> Suisse · Mirecourt <span class="td-date">07.06</span></td><td>P10</td><td>P10</td></tr>
-        <tr class="row-hl"><td><strong>R3</strong> Suisse · Vesoul <span class="td-date">05.07</span></td><td>P8</td><td class="podium">P4</td></tr>
-        <tr class="row-hl"><td><strong>R4</strong> Suisse · Bugey <span class="td-date">06.09</span></td><td>P7</td><td class="podium">P4</td></tr>
-        <tr><td><strong>IAME France</strong> · Varennes</td><td>P17</td><td>P16/27</td></tr>
-        <tr><td><strong>R5</strong> Suisse · Levier <span class="td-date">04.10</span></td><td>P9</td><td>P7</td></tr>
-      </tbody>
-    </table>
-    <p class="table-note">Varennes : première course au niveau national, cinquième course de sa carrière. Né en 2011, Carlo a 17 ans en 2028, l'âge d'entrée en F4.</p>
+  <div class="rounds">
+    <article class="round">
+      <div class="round-tag">R1</div>
+      <div class="round-circuit"><strong>Levier</strong><span>Suisse · 03.05.2026</span></div>
+      <div class="round-prog">
+        <div class="rp-cell"><span class="rp-k">Qualif</span><span class="rp-v">P6</span></div>
+        <div class="rp-arrow" data-delta="-1">↘</div>
+        <div class="rp-cell"><span class="rp-k">Finale</span><span class="rp-v">P7</span></div>
+      </div>
+    </article>
+    <article class="round">
+      <div class="round-tag">R2</div>
+      <div class="round-circuit"><strong>Mirecourt</strong><span>Suisse · 07.06.2026</span></div>
+      <div class="round-prog">
+        <div class="rp-cell"><span class="rp-k">Qualif</span><span class="rp-v">P10</span></div>
+        <div class="rp-arrow" data-delta="0">→</div>
+        <div class="rp-cell"><span class="rp-k">Finale</span><span class="rp-v">P10</span></div>
+      </div>
+    </article>
+    <article class="round round-podium">
+      <div class="round-tag">R3</div>
+      <div class="round-circuit"><strong>Vesoul</strong><span>Suisse · 05.07.2026</span></div>
+      <div class="round-prog">
+        <div class="rp-cell"><span class="rp-k">Qualif</span><span class="rp-v">P8</span></div>
+        <div class="rp-arrow rp-up" data-delta="+4">↗ +4</div>
+        <div class="rp-cell"><span class="rp-k">Finale</span><span class="rp-v rp-win">P4</span></div>
+      </div>
+      <span class="round-badge">Podium</span>
+    </article>
+    <article class="round round-podium">
+      <div class="round-tag">R4</div>
+      <div class="round-circuit"><strong>Bugey</strong><span>Suisse · 06.09.2026</span></div>
+      <div class="round-prog">
+        <div class="rp-cell"><span class="rp-k">Qualif</span><span class="rp-v">P7</span></div>
+        <div class="rp-arrow rp-up" data-delta="+3">↗ +3</div>
+        <div class="rp-cell"><span class="rp-k">Finale</span><span class="rp-v rp-win">P4</span></div>
+      </div>
+      <span class="round-badge">Podium</span>
+    </article>
+    <article class="round">
+      <div class="round-tag">FR</div>
+      <div class="round-circuit"><strong>Varennes</strong><span>IAME France · National</span></div>
+      <div class="round-prog">
+        <div class="rp-cell"><span class="rp-k">Qualif</span><span class="rp-v">P17</span></div>
+        <div class="rp-arrow rp-up" data-delta="+1">↗</div>
+        <div class="rp-cell"><span class="rp-k">Finale</span><span class="rp-v">P16<small>/27</small></span></div>
+      </div>
+    </article>
+    <article class="round">
+      <div class="round-tag">R5</div>
+      <div class="round-circuit"><strong>Levier</strong><span>Suisse · 04.10.2026</span></div>
+      <div class="round-prog">
+        <div class="rp-cell"><span class="rp-k">Qualif</span><span class="rp-v">P9</span></div>
+        <div class="rp-arrow rp-up" data-delta="+2">↗ +2</div>
+        <div class="rp-cell"><span class="rp-k">Finale</span><span class="rp-v">P7</span></div>
+      </div>
+    </article>
   </div>
+  <p class="table-note">Varennes : première course au niveau national, cinquième course de sa carrière. Né en 2011, Carlo a 17 ans en 2028, l'âge d'entrée en F4.</p>
 
   <h3 class="subhead">Autres courses <span class="accent">(hors championnat)</span></h3>
   <div class="other-races">
@@ -201,19 +241,39 @@
     <span class="eyebrow">Galerie</span>
     <h2>Saison <span class="accent">en images</span></h2>
   </div>
-  <div class="gallery-grid">
-    <a class="g-item g-feature" href="assets/gallery/hero3.jpg"><img src="assets/gallery/hero3.jpg" alt="Carlo Ristagno dans le kart" loading="lazy"><span class="g-cap">En grille · 2026</span></a>
-    <a class="g-item" href="assets/gallery/01.jpg"><img src="assets/gallery/01.jpg" alt="Carlo Ristagno karting" loading="lazy"><span class="g-cap">Varennes · 2026</span></a>
-    <a class="g-item" href="assets/gallery/03.jpg"><img src="assets/gallery/03.jpg" alt="Carlo Ristagno karting" loading="lazy"><span class="g-cap">Stand · 2026</span></a>
-    <a class="g-item" href="assets/gallery/05.jpg"><img src="assets/gallery/05.jpg" alt="Carlo Ristagno karting" loading="lazy"><span class="g-cap">Grille de départ · 2026</span></a>
-    <a class="g-item" href="assets/gallery/06.jpg"><img src="assets/gallery/06.jpg" alt="Carlo Ristagno karting" loading="lazy"><span class="g-cap">Paddock · 2026</span></a>
-    <a class="g-item g-wide2" href="assets/gallery/07.jpg"><img src="assets/gallery/07.jpg" alt="Carlo Ristagno karting" loading="lazy"><span class="g-cap">Avant-course · 2026</span></a>
-    <a class="g-item" href="assets/gallery/08.jpg"><img src="assets/gallery/08.jpg" alt="Carlo Ristagno karting" loading="lazy"><span class="g-cap">Kart #115 · 2026</span></a>
-    <a class="g-item" href="assets/gallery/09.jpg"><img src="assets/gallery/09.jpg" alt="Carlo Ristagno karting" loading="lazy"><span class="g-cap">Pré-grille · 2026</span></a>
-    <a class="g-item" href="assets/gallery/10.jpg"><img src="assets/gallery/10.jpg" alt="Carlo Ristagno karting" loading="lazy"><span class="g-cap">Circuit · 2026</span></a>
-    <a class="g-item" href="assets/gallery/11.jpg"><img src="assets/gallery/11.jpg" alt="Carlo Ristagno karting" loading="lazy"><span class="g-cap">Avec l'équipe · 2026</span></a>
-    <a class="g-item" href="assets/gallery/12.jpg"><img src="assets/gallery/12.jpg" alt="Carlo Ristagno karting" loading="lazy"><span class="g-cap">Kart #115 face · 2026</span></a>
+  <div class="filmstrip">
+    <div class="strip strip-a">
+      <a class="shot" href="assets/gallery/hero3.jpg"><img src="assets/gallery/hero3.jpg" alt="Carlo dans le kart" loading="lazy"></a>
+      <a class="shot" href="assets/gallery/02.jpg"><img src="assets/gallery/02.jpg" alt="Carlo en piste" loading="lazy"></a>
+      <a class="shot" href="assets/gallery/05.jpg"><img src="assets/gallery/05.jpg" alt="Grille de départ" loading="lazy"></a>
+      <a class="shot" href="assets/gallery/07.jpg"><img src="assets/gallery/07.jpg" alt="Avant la course" loading="lazy"></a>
+      <a class="shot" href="assets/gallery/09.jpg"><img src="assets/gallery/09.jpg" alt="Pré-grille" loading="lazy"></a>
+      <a class="shot" href="assets/gallery/11.jpg"><img src="assets/gallery/11.jpg" alt="Avec l'équipe" loading="lazy"></a>
+      <!-- duplication pour boucle -->
+      <a class="shot" href="assets/gallery/hero3.jpg" aria-hidden="true"><img src="assets/gallery/hero3.jpg" alt="" loading="lazy"></a>
+      <a class="shot" href="assets/gallery/02.jpg" aria-hidden="true"><img src="assets/gallery/02.jpg" alt="" loading="lazy"></a>
+      <a class="shot" href="assets/gallery/05.jpg" aria-hidden="true"><img src="assets/gallery/05.jpg" alt="" loading="lazy"></a>
+      <a class="shot" href="assets/gallery/07.jpg" aria-hidden="true"><img src="assets/gallery/07.jpg" alt="" loading="lazy"></a>
+      <a class="shot" href="assets/gallery/09.jpg" aria-hidden="true"><img src="assets/gallery/09.jpg" alt="" loading="lazy"></a>
+      <a class="shot" href="assets/gallery/11.jpg" aria-hidden="true"><img src="assets/gallery/11.jpg" alt="" loading="lazy"></a>
+    </div>
+    <div class="strip strip-b">
+      <a class="shot" href="assets/gallery/12.jpg"><img src="assets/gallery/12.jpg" alt="Kart #115 de face" loading="lazy"></a>
+      <a class="shot" href="assets/gallery/03.jpg"><img src="assets/gallery/03.jpg" alt="Au stand" loading="lazy"></a>
+      <a class="shot" href="assets/gallery/06.jpg"><img src="assets/gallery/06.jpg" alt="Paddock" loading="lazy"></a>
+      <a class="shot" href="assets/gallery/08.jpg"><img src="assets/gallery/08.jpg" alt="Kart #115" loading="lazy"></a>
+      <a class="shot" href="assets/gallery/10.jpg"><img src="assets/gallery/10.jpg" alt="Sur le circuit" loading="lazy"></a>
+      <a class="shot" href="assets/gallery/01.jpg"><img src="assets/gallery/01.jpg" alt="Varennes" loading="lazy"></a>
+      <!-- duplication pour boucle -->
+      <a class="shot" href="assets/gallery/12.jpg" aria-hidden="true"><img src="assets/gallery/12.jpg" alt="" loading="lazy"></a>
+      <a class="shot" href="assets/gallery/03.jpg" aria-hidden="true"><img src="assets/gallery/03.jpg" alt="" loading="lazy"></a>
+      <a class="shot" href="assets/gallery/06.jpg" aria-hidden="true"><img src="assets/gallery/06.jpg" alt="" loading="lazy"></a>
+      <a class="shot" href="assets/gallery/08.jpg" aria-hidden="true"><img src="assets/gallery/08.jpg" alt="" loading="lazy"></a>
+      <a class="shot" href="assets/gallery/10.jpg" aria-hidden="true"><img src="assets/gallery/10.jpg" alt="" loading="lazy"></a>
+      <a class="shot" href="assets/gallery/01.jpg" aria-hidden="true"><img src="assets/gallery/01.jpg" alt="" loading="lazy"></a>
+    </div>
   </div>
+  <p class="strip-hint">Survolez pour mettre en pause · cliquez pour agrandir</p>
 </section>
 
 <!-- ===== PARTENAIRES (marquee) ===== -->
@@ -252,7 +312,7 @@
   <div class="closer-overlay"></div>
   <div class="closer-content">
     <p class="closer-kicker">LE MOT D'ORDRE</p>
-    <h2>STILL<br>WE RISE</h2>
+    <h2>Still We Rise</h2>
     <a href="#contact" class="btn-primary">Soutenir Carlo</a>
   </div>
 </section>
