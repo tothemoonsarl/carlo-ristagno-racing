@@ -27,8 +27,8 @@ img{max-width:100%;display:block}
 #burger{display:none;background:none;border:none;color:#fff;font-size:24px;cursor:pointer}
 
 /* HERO */
-.hero{position:relative;height:100vh;min-height:600px;display:flex;align-items:flex-end;justify-content:center;text-align:center;overflow:hidden;padding-bottom:110px}
-.hero-media{position:absolute;inset:0;background:url('assets/gallery/hero3.jpg') center top/cover no-repeat}
+.hero{position:relative;height:78vh;min-height:520px;max-height:760px;display:flex;align-items:flex-end;justify-content:center;text-align:center;overflow:hidden;padding-bottom:70px}
+.hero-media{position:absolute;inset:0;background:url('assets/gallery/hero3.jpg') center 15%/cover no-repeat}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,12,.25) 0%,rgba(10,10,12,.2) 35%,rgba(10,10,12,.75) 75%,rgba(10,10,12,.97) 100%)}
 .hero-content{position:relative;z-index:2;padding:0 24px}
 .hero-kicker{color:var(--red);font-weight:600;letter-spacing:3px;font-size:14px;margin-bottom:16px}
