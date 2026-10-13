@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Carlo Ristagno Racing — Pilote de karting</title>
-<meta name="description" content="Carlo Ristagno, pilote de karting de compétition. Première saison 2026 en catégorie S125 Junior — Championnat IAME Series Switzerland (Vega Trofeo).">
+<meta name="description" content="Carlo Ristagno, pilote de karting de compétition. Saison 2026 en S125 Junior — Championnat IAME Series Switzerland (Vega Trofeo).">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Archivo+Narrow:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -24,7 +24,6 @@
       <a href="#pilote">Le Pilote</a>
       <a href="#resultats">Résultats</a>
       <a href="#galerie">Galerie</a>
-      <a href="#team">Team</a>
       <a href="#partenaires">Partenaires</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -38,30 +37,65 @@
   <div class="hero-media"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <p class="hero-kicker">#115 · #477 — S125 JUNIOR</p>
-    <h1>CARLO RISTAGNO</h1>
-    <p class="hero-tagline">Still We Rise</p>
-    <div class="hero-cta">
-      <a href="#resultats" class="btn-primary">Saison 2026</a>
-      <a href="#pilote" class="btn-ghost">Découvrir le pilote</a>
+    <p class="hero-kicker">PILOTE DE KARTING · S125 JUNIOR</p>
+    <h1>CARLO<br>RISTAGNO</h1>
+    <p class="hero-sub">Cavallino Rampante · #115 — Saison 2026</p>
+  </div>
+  <!-- Carte saison flottante -->
+  <div class="hero-card">
+    <span class="hc-label">Championnat 2026</span>
+    <div class="hc-main">
+      <span class="hc-pos">P5<small>/26</small></span>
+      <div class="hc-detail">
+        <strong>IAME Series Switzerland</strong>
+        <span>Vega Trofeo · S125 Junior</span>
+      </div>
     </div>
+    <a href="#resultats" class="hc-link">Voir la saison →</a>
   </div>
   <div class="hero-scroll">SCROLL ↓</div>
 </section>
 
-<!-- ===== STATS ===== -->
-<section class="stats">
-  <div class="stat"><span class="stat-num">1</span><span class="stat-label">Championnat</span></div>
-  <div class="stat"><span class="stat-num">4</span><span class="stat-label">Podiums</span></div>
-  <div class="stat"><span class="stat-num">1</span><span class="stat-label">Victoire</span></div>
-  <div class="stat"><span class="stat-num">6</span><span class="stat-label">Courses 2026</span></div>
+<!-- ===== BANDEAU STAT ICONIQUE ===== -->
+<section class="bigstat">
+  <div class="bigstat-inner">
+    <div class="bigstat-num">
+      <span class="bs-flag">⚑</span>
+      <span class="bs-val">P5</span>
+    </div>
+    <div class="bigstat-text">
+      <h2>5<sup>e</sup> au championnat, sur 26 pilotes</h2>
+      <p>Première saison complète en catégorie Junior. Deux podiums consécutifs en finale, une remontée de la dernière place à la 7<sup>e</sup>, et une première course au niveau national à Varennes.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PANNEAUX ON / OFF TRACK ===== -->
+<section class="split">
+  <div class="split-panel" style="background-image:url('assets/gallery/02.jpg')">
+    <div class="split-overlay"></div>
+    <div class="split-content">
+      <span class="split-eyebrow">01</span>
+      <h2>SUR<br>LA PISTE</h2>
+      <p>En course, casque baissé, numéro 115. Chaque manche du championnat Vega Trofeo, chrono après chrono.</p>
+      <a href="#resultats" class="split-link">Les résultats →</a>
+    </div>
+  </div>
+  <div class="split-panel" style="background-image:url('assets/gallery/04.jpg')">
+    <div class="split-overlay"></div>
+    <div class="split-content">
+      <span class="split-eyebrow">02</span>
+      <h2>HORS<br>PISTE</h2>
+      <p>Le parcours d'un pilote de 15 ans : du simulateur F1 au kart X30, du karting de location à la compétition.</p>
+      <a href="#pilote" class="split-link">Son histoire →</a>
+    </div>
+  </div>
 </section>
 
 <!-- ===== LE PILOTE ===== -->
 <section id="pilote" class="section">
   <div class="section-head">
-    <span class="eyebrow">Le Pilote</span>
-    <h2>Carlo Ristagno, <span class="accent">première saison 2026</span></h2>
+    <h2>Le <span class="accent">Pilote</span></h2>
   </div>
   <div class="pilote-grid">
     <div class="pilote-photo">
@@ -79,6 +113,10 @@
         <li><span>Numéro</span> 115 / 477</li>
         <li><span>Catégorie</span> S125 Junior</li>
       </ul>
+      <a href="https://www.cavallinorampante.ch/" target="_blank" rel="noopener" class="pilote-team">
+        <img src="assets/logo-cr.png" alt="Cavallino Rampante">
+        <span><strong>Team Cavallino Rampante</strong>L'écurie qui accompagne Carlo sur chaque manche →</span>
+      </a>
     </div>
   </div>
 </section>
@@ -164,76 +202,63 @@
     <h2>Saison <span class="accent">en images</span></h2>
   </div>
   <div class="gallery-grid">
-    <a class="g-item g-tall" href="assets/gallery/01.jpg"><img src="assets/gallery/01.jpg" alt="Carlo Ristagno karting" loading="lazy"></a>
-    <a class="g-item" href="assets/gallery/02.jpg"><img src="assets/gallery/02.jpg" alt="Carlo Ristagno karting" loading="lazy"></a>
-    <a class="g-item" href="assets/gallery/03.jpg"><img src="assets/gallery/03.jpg" alt="Carlo Ristagno karting" loading="lazy"></a>
-    <a class="g-item g-wide" href="assets/gallery/05.jpg"><img src="assets/gallery/05.jpg" alt="Carlo Ristagno karting" loading="lazy"></a>
-    <a class="g-item" href="assets/gallery/06.jpg"><img src="assets/gallery/06.jpg" alt="Carlo Ristagno karting" loading="lazy"></a>
-    <a class="g-item g-tall" href="assets/gallery/07.jpg"><img src="assets/gallery/07.jpg" alt="Carlo Ristagno karting" loading="lazy"></a>
-    <a class="g-item" href="assets/gallery/08.jpg"><img src="assets/gallery/08.jpg" alt="Carlo Ristagno karting" loading="lazy"></a>
-    <a class="g-item" href="assets/gallery/09.jpg"><img src="assets/gallery/09.jpg" alt="Carlo Ristagno karting" loading="lazy"></a>
-    <a class="g-item" href="assets/gallery/10.jpg"><img src="assets/gallery/10.jpg" alt="Carlo Ristagno karting" loading="lazy"></a>
-    <a class="g-item g-wide" href="assets/gallery/11.jpg"><img src="assets/gallery/11.jpg" alt="Carlo Ristagno karting" loading="lazy"></a>
-    <a class="g-item" href="assets/gallery/12.jpg"><img src="assets/gallery/12.jpg" alt="Carlo Ristagno karting" loading="lazy"></a>
+    <a class="g-item g-feature" href="assets/gallery/hero3.jpg"><img src="assets/gallery/hero3.jpg" alt="Carlo Ristagno dans le kart" loading="lazy"><span class="g-cap">En grille · 2026</span></a>
+    <a class="g-item" href="assets/gallery/01.jpg"><img src="assets/gallery/01.jpg" alt="Carlo Ristagno karting" loading="lazy"><span class="g-cap">Varennes · 2026</span></a>
+    <a class="g-item" href="assets/gallery/03.jpg"><img src="assets/gallery/03.jpg" alt="Carlo Ristagno karting" loading="lazy"><span class="g-cap">Stand · 2026</span></a>
+    <a class="g-item" href="assets/gallery/05.jpg"><img src="assets/gallery/05.jpg" alt="Carlo Ristagno karting" loading="lazy"><span class="g-cap">Grille de départ · 2026</span></a>
+    <a class="g-item" href="assets/gallery/06.jpg"><img src="assets/gallery/06.jpg" alt="Carlo Ristagno karting" loading="lazy"><span class="g-cap">Paddock · 2026</span></a>
+    <a class="g-item g-wide2" href="assets/gallery/07.jpg"><img src="assets/gallery/07.jpg" alt="Carlo Ristagno karting" loading="lazy"><span class="g-cap">Avant-course · 2026</span></a>
+    <a class="g-item" href="assets/gallery/08.jpg"><img src="assets/gallery/08.jpg" alt="Carlo Ristagno karting" loading="lazy"><span class="g-cap">Kart #115 · 2026</span></a>
+    <a class="g-item" href="assets/gallery/09.jpg"><img src="assets/gallery/09.jpg" alt="Carlo Ristagno karting" loading="lazy"><span class="g-cap">Pré-grille · 2026</span></a>
+    <a class="g-item" href="assets/gallery/10.jpg"><img src="assets/gallery/10.jpg" alt="Carlo Ristagno karting" loading="lazy"><span class="g-cap">Circuit · 2026</span></a>
+    <a class="g-item" href="assets/gallery/11.jpg"><img src="assets/gallery/11.jpg" alt="Carlo Ristagno karting" loading="lazy"><span class="g-cap">Avec l'équipe · 2026</span></a>
+    <a class="g-item" href="assets/gallery/12.jpg"><img src="assets/gallery/12.jpg" alt="Carlo Ristagno karting" loading="lazy"><span class="g-cap">Kart #115 face · 2026</span></a>
   </div>
 </section>
 
-<!-- ===== TEAM ===== -->
-<section id="team" class="section">
-  <div class="section-head">
-    <span class="eyebrow">L'écurie</span>
-    <h2>La <span class="accent">Team</span></h2>
-  </div>
-  <div class="team-card">
-    <div class="team-logo">
-      <img src="assets/logo-cr.png" alt="Cavallino Rampante">
-    </div>
-    <div class="team-info">
-      <strong>Cavallino Rampante</strong>
-      <p>Carlo court sous les couleurs de Cavallino Rampante, l'écurie de karting de compétition qui l'accompagne depuis ses débuts. Préparation technique, logistique de course et encadrement sur chaque manche du championnat.</p>
-      <p class="team-motto">« Destiné à la vitesse. Construis tes propres rêves. Viens vivre la passion du karting de compétition. »</p>
-      <a href="https://www.cavallinorampante.ch/" target="_blank" rel="noopener" class="team-link">cavallinorampante.ch →</a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== PARTENAIRES ===== -->
-<section id="partenaires" class="section section-alt">
+<!-- ===== PARTENAIRES (marquee) ===== -->
+<section id="partenaires" class="section">
   <div class="section-head">
     <span class="eyebrow">Partenaires</span>
     <h2>Ceux qui croient en <span class="accent">Carlo</span></h2>
   </div>
-  <div class="partners-grid">
-    <a class="partner" href="https://www.origyn.com/" target="_blank" rel="noopener">
-      <div class="partner-logo partner-logo-light"><img src="assets/partners/origyn-black.png" alt="Origyn Foundation"></div>
-      <strong>Origyn Foundation</strong>
-      <p>Secure your assets, intellectual property, and identity fully on-chain.</p>
-    </a>
-    <a class="partner" href="https://www.6m.lu/" target="_blank" rel="noopener">
-      <div class="partner-logo"><img src="assets/partners/6monks.png" alt="6 Monks"></div>
-      <strong>6 Monks</strong>
-      <p>Alternative Investment Fund Manager — Private Equity and Web3 ecosystems.</p>
-    </a>
-    <a class="partner" href="https://quantumagency.ai/" target="_blank" rel="noopener">
-      <div class="partner-logo partner-logo-light"><img src="assets/partners/quantum.png" alt="Quantum Agency"></div>
-      <strong>Quantum Agency</strong>
-      <p>Organic strategies to build sustainable and authentic engagement.</p>
-    </a>
-    <a class="partner" href="https://adl.ch/" target="_blank" rel="noopener">
-      <div class="partner-logo partner-logo-light"><img src="assets/partners/adl.png" alt="ADL publicité"></div>
-      <strong>ADL publicité</strong>
-      <p>Solutions sur mesure pour vos réalisations publicitaires et votre signalétique.</p>
-    </a>
-    <a class="partner">
-      <div class="partner-logo partner-text">MEOTIS</div>
-      <strong>Meotis</strong>
-      <p>The Intelligence of Motion</p>
-    </a>
+  <div class="marquee">
+    <div class="marquee-track">
+      <a class="m-logo" href="https://www.origyn.com/" target="_blank" rel="noopener"><img src="assets/partners/origyn-black.png" alt="Origyn"></a>
+      <a class="m-logo" href="https://www.6m.lu/" target="_blank" rel="noopener"><img src="assets/partners/6monks.png" alt="6 Monks"></a>
+      <a class="m-logo" href="https://quantumagency.ai/" target="_blank" rel="noopener"><img src="assets/partners/quantum.png" alt="Quantum Agency"></a>
+      <a class="m-logo" href="https://adl.ch/" target="_blank" rel="noopener"><img src="assets/partners/adl.png" alt="ADL publicité"></a>
+      <span class="m-logo m-text">MEOTIS</span>
+      <!-- duplication pour boucle -->
+      <a class="m-logo" href="https://www.origyn.com/" target="_blank" rel="noopener" aria-hidden="true"><img src="assets/partners/origyn-black.png" alt=""></a>
+      <a class="m-logo" href="https://www.6m.lu/" target="_blank" rel="noopener" aria-hidden="true"><img src="assets/partners/6monks.png" alt=""></a>
+      <a class="m-logo" href="https://quantumagency.ai/" target="_blank" rel="noopener" aria-hidden="true"><img src="assets/partners/quantum.png" alt=""></a>
+      <a class="m-logo" href="https://adl.ch/" target="_blank" rel="noopener" aria-hidden="true"><img src="assets/partners/adl.png" alt=""></a>
+      <span class="m-logo m-text" aria-hidden="true">MEOTIS</span>
+    </div>
+  </div>
+  <div class="partners-detail">
+    <a class="pd-item" href="https://www.origyn.com/" target="_blank" rel="noopener"><strong>Origyn Foundation</strong><span>Secure your assets, intellectual property, and identity fully on-chain.</span></a>
+    <a class="pd-item" href="https://www.6m.lu/" target="_blank" rel="noopener"><strong>6 Monks</strong><span>Alternative Investment Fund Manager — Private Equity and Web3.</span></a>
+    <a class="pd-item" href="https://quantumagency.ai/" target="_blank" rel="noopener"><strong>Quantum Agency</strong><span>Organic strategies for sustainable, authentic engagement.</span></a>
+    <a class="pd-item" href="https://adl.ch/" target="_blank" rel="noopener"><strong>ADL publicité</strong><span>Solutions sur mesure pour vos réalisations publicitaires.</span></a>
+    <span class="pd-item"><strong>Meotis</strong><span>The Intelligence of Motion</span></span>
+  </div>
+</section>
+
+<!-- ===== TAGLINE CLOTURE ===== -->
+<section class="closer">
+  <div class="closer-media"></div>
+  <div class="closer-overlay"></div>
+  <div class="closer-content">
+    <p class="closer-kicker">LE MOT D'ORDRE</p>
+    <h2>STILL<br>WE RISE</h2>
+    <a href="#contact" class="btn-primary">Soutenir Carlo</a>
   </div>
 </section>
 
 <!-- ===== CONTACT ===== -->
-<section id="contact" class="section section-alt">
+<section id="contact" class="section">
   <div class="section-head">
     <span class="eyebrow">Contact</span>
     <h2>Rejoignez <span class="accent">l'aventure</span></h2>
@@ -259,7 +284,6 @@
       <a href="#pilote">Le Pilote</a>
       <a href="#resultats">Résultats</a>
       <a href="#galerie">Galerie</a>
-      <a href="#team">Team</a>
       <a href="#partenaires">Partenaires</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -267,9 +291,7 @@
   <p class="copyright">© 2026 Carlo Ristagno Racing. Tous droits réservés.</p>
 </footer>
 
-<!-- Lightbox -->
 <div id="lightbox" class="lightbox"><img src="" alt=""><span class="lb-close">×</span></div>
-
 <script src="script.js"></script>
 </body>
 </html>
