@@ -29,16 +29,21 @@ sup{font-size:.5em;vertical-align:super}
 
 /* HERO */
 .hero{position:relative;height:92vh;min-height:620px;display:flex;align-items:flex-end;overflow:hidden}
-.hero-media{position:absolute;inset:0;background:url('assets/gallery/hero3.jpg') center 15%/cover no-repeat}
+.hero-media{position:absolute;inset:0;background:url('assets/gallery/hero3.jpg') center 15%/cover no-repeat;animation:heroZoom 1.4s ease both}
+@keyframes heroZoom{from{transform:scale(1.08)}to{transform:scale(1)}}
+@media(prefers-reduced-motion:reduce){.hero-media{animation:none}}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,12,.3) 0%,rgba(10,10,12,.15) 40%,rgba(10,10,12,.9) 100%)}
 .hero-content{position:relative;z-index:2;padding:0 48px 90px;max-width:var(--maxw);margin:0 auto;width:100%}
-.hero-kicker{color:var(--red);font-weight:700;letter-spacing:3px;font-size:13px;margin-bottom:12px}
-.hero h1{font-size:clamp(56px,11vw,150px);font-weight:900;line-height:.86;text-transform:uppercase;letter-spacing:-3px}
-.hero-sub{font-size:clamp(15px,2vw,20px);color:var(--txt);margin-top:20px;font-weight:500}
+.hero-kicker{color:var(--red);font-weight:700;letter-spacing:3px;font-size:13px;margin-bottom:12px;animation:heroUp .7s both .1s}
+.hero h1{font-size:clamp(56px,11vw,150px);font-weight:900;line-height:.86;text-transform:uppercase;letter-spacing:-3px;animation:heroUp .9s both .25s}
+.hero-sub{font-size:clamp(15px,2vw,20px);color:var(--txt);margin-top:20px;font-weight:500;animation:heroUp .7s both .5s}
+@keyframes heroUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+@keyframes heroCard{from{opacity:0;transform:translateY(30px) scale(.96)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.hero-kicker,.hero h1,.hero-sub,.hero-card{animation:none}}
 .hero-scroll{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);z-index:2;font-size:11px;letter-spacing:2px;color:var(--txt-dim);animation:bob 2s infinite}
 @keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
 /* Carte saison flottante */
-.hero-card{position:absolute;z-index:3;right:48px;bottom:90px;background:rgba(22,22,28,.92);backdrop-filter:blur(16px);border:1px solid var(--line);border-radius:14px;padding:24px;width:320px;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.hero-card{position:absolute;z-index:3;right:48px;bottom:90px;background:rgba(22,22,28,.92);backdrop-filter:blur(16px);border:1px solid var(--line);border-radius:14px;padding:24px;width:320px;box-shadow:0 20px 60px rgba(0,0,0,.5);animation:heroCard .8s both .7s}
 .hc-label{font-size:11px;text-transform:uppercase;letter-spacing:2px;color:var(--red);font-weight:700}
 .hc-main{display:flex;align-items:center;gap:16px;margin:14px 0 18px}
 .hc-pos{font-size:52px;font-weight:900;line-height:1;color:#fff}
@@ -86,8 +91,8 @@ sup{font-size:.5em;vertical-align:super}
 .pilote-facts span{display:block;font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--txt-dim);font-weight:500}
 .fact-team{grid-column:1 / -1;transition:border-color .2s}
 .fact-team:hover{border-color:var(--red)}
-.fact-team a{display:flex;align-items:center;gap:12px;margin-top:4px;font-family:'Archivo';font-weight:700;font-size:16px}
-.fact-team img{height:40px;width:auto;flex-shrink:0}
+.fact-team a{display:flex;flex-direction:column;align-items:center;gap:14px;margin-top:4px;font-family:'Archivo';font-weight:700;font-size:18px;text-align:center}
+.fact-team img{height:256px;width:auto;max-width:100%}
 
 /* HIGHLIGHT CARDS */
 .highlight-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:48px}
@@ -119,17 +124,18 @@ sup{font-size:.5em;vertical-align:super}
 
 /* OTHER RACES */
 .other-races{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.ocard{position:relative;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;display:flex;gap:24px;align-items:center;overflow:hidden;transition:border-color .2s,transform .2s}
+.ocard{position:relative;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px;display:flex;gap:22px;align-items:center;overflow:hidden;transition:border-color .2s,transform .2s}
 .ocard:hover{transform:translateY(-3px)}
-.ocard-pos{display:flex;flex-direction:column;align-items:center;gap:8px;flex-shrink:0}
-.ocard-rank{font-family:'Archivo';font-size:44px;font-weight:900;line-height:1;letter-spacing:-2px}
-.ocard-medal{width:28px;height:28px;border-radius:50%;position:relative}
+.ocard-pos{display:flex;align-items:center;gap:12px;flex-shrink:0;width:118px}
+.ocard-medal{width:26px;height:26px;border-radius:50%;position:relative;flex-shrink:0}
 .ocard-medal.gold{background:radial-gradient(circle at 35% 30%,#ffe08a,#e4a400)}
 .ocard-medal.silver{background:radial-gradient(circle at 35% 30%,#eaeaea,#9aa0a6)}
 .ocard-medal::after{content:"";position:absolute;inset:6px;border-radius:50%;border:1.5px solid rgba(0,0,0,.2)}
-.ocard-body strong{display:block;font-family:'Archivo';font-size:19px;font-weight:800;letter-spacing:-.5px}
+.ocard-rank{font-family:'Archivo';font-size:46px;font-weight:900;line-height:1;letter-spacing:-2px}
+.ocard-body{min-width:0}
+.ocard-body strong{display:block;font-family:'Archivo';font-size:19px;font-weight:800;letter-spacing:-.5px;line-height:1.2}
 .ocard-body span{display:block;color:var(--txt-dim);font-size:13px;margin:6px 0}
-.ocard-body em{color:var(--red);font-size:13px;font-style:normal;font-weight:700;text-transform:uppercase;letter-spacing:.5px}
+.ocard-body em{color:var(--red);font-size:12px;font-style:normal;font-weight:700;text-transform:uppercase;letter-spacing:.5px}
 .ocard-win{border-color:rgba(228,0,43,.45)}
 .ocard-win .ocard-rank{color:var(--red)}
 .ocard-flag{position:absolute;top:0;right:0;background:var(--red);color:#fff;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:5px 14px;border-radius:0 14px 0 12px}
@@ -203,7 +209,7 @@ sup{font-size:.5em;vertical-align:super}
 footer{background:var(--bg-alt);border-top:1px solid var(--line);position:relative;overflow:hidden}
 .footer-top{max-width:var(--maxw);margin:0 auto;padding:64px 24px 48px;display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px}
 .footer-brand{max-width:320px}
-.footer-logo{height:72px;margin-bottom:18px}
+.footer-logo{height:90px;margin-bottom:18px}
 .footer-tag{font-size:14px;color:var(--txt-dim);line-height:1.6}
 .footer-num{display:flex;gap:10px;margin-top:22px}
 .footer-num span{font-family:'Archivo';font-weight:900;font-size:16px;color:var(--red);border:1px solid rgba(228,0,43,.4);border-radius:6px;padding:4px 12px;letter-spacing:1px}
@@ -211,7 +217,7 @@ footer{background:var(--bg-alt);border-top:1px solid var(--line);position:relati
 .footer-col a{display:block;color:var(--txt-dim);font-size:14px;margin-bottom:12px;transition:color .2s,padding-left .2s}
 .footer-col a:hover{color:var(--red);padding-left:4px}
 .footer-team-link{display:flex!important;align-items:center;gap:10px}
-.footer-team-link img{height:32px;width:auto}
+.footer-team-link img{height:176px;width:auto}
 .footer-team-link span{font-weight:600;color:var(--txt)}
 .footer-bottom{border-top:1px solid var(--line);max-width:var(--maxw);margin:0 auto;padding:22px 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
 .footer-name{font-family:'Archivo';font-weight:900;font-size:20px;letter-spacing:-.5px;color:var(--txt)}
