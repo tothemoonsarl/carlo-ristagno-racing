@@ -132,9 +132,9 @@ sup{font-size:.5em;vertical-align:super}
 .ocard-medal.silver{background:radial-gradient(circle at 35% 30%,#eaeaea,#9aa0a6)}
 .ocard-medal::after{content:"";position:absolute;inset:6px;border-radius:50%;border:1.5px solid rgba(0,0,0,.2)}
 .ocard-rank{font-family:'Archivo';font-size:46px;font-weight:900;line-height:1;letter-spacing:-2px}
-.ocard-body{min-width:0}
+.ocard-body{min-width:0;display:flex;flex-direction:column;justify-content:center;gap:5px}
 .ocard-body strong{display:block;font-family:'Archivo';font-size:19px;font-weight:800;letter-spacing:-.5px;line-height:1.2}
-.ocard-body span{display:block;color:var(--txt-dim);font-size:13px;margin:6px 0}
+.ocard-body span{display:block;color:var(--txt-dim);font-size:13px;margin:0}
 .ocard-body em{color:var(--red);font-size:12px;font-style:normal;font-weight:700;text-transform:uppercase;letter-spacing:.5px}
 .ocard-win{border-color:rgba(228,0,43,.45)}
 .ocard-win .ocard-rank{color:var(--red)}
