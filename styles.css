@@ -263,3 +263,12 @@ footer{background:var(--bg-alt);border-top:1px solid var(--line);position:relati
   .shot{height:180px}
   .hero-card{margin:-50px 16px 0}
 }
+
+/* Sélecteur de langue (drapeaux) */
+.lang{display:flex;align-items:center;gap:10px;margin-left:auto;margin-right:18px}
+.lang a{display:block;line-height:0;opacity:.45;transition:opacity .2s,transform .2s}
+.lang a:hover{opacity:1;transform:translateY(-1px)}
+.lang a[aria-current="page"]{opacity:1}
+.lang svg{width:24px;height:16px;border-radius:2px;box-shadow:0 0 0 1px rgba(127,127,127,.35)}
+.lang a[aria-current="page"] svg{box-shadow:0 0 0 2px currentColor}
+@media (max-width:520px){.lang{gap:7px;margin-right:10px}.lang svg{width:20px;height:13px}}
